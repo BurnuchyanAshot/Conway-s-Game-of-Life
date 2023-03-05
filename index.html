@@ -1,18 +1,37 @@
 <html>
-   <head>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
-       <script src="class.js"></script>
-       <script src="GrassEater.js"></script>
-       <script src="Monster.js"></script>
-       <script src="Angel.js"></script>
-       <script src="Virus.js"></script>
-       <script src="script.js"></script>
-   </head>
-    <body>
-        <h2 style="color: green;">Grass</h2>
-        <h2 style="color: yellow;">GrassEater</h2>
-        <h2 style="color: black;">Monster - eats GrassEater and kills Grass</h2>
-        <h2 style="color: blue;">Angel - kills the Monster and Virus</h2>
-        <h2 style="color: red;">Virus - kills everyone except an Angel and Grass</h2>
-    </body>
+
+<head>
+    <title>Game of life</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script src="class.js"></script>
+    <script src="GrassEater.js"></script>
+    <script src="Monster.js"></script>
+    <script src="Help.js"></script>
+    <script src="Virus.js"></script>
+    <script src="LivingCreature.js"></script>
+    <script src="Kerpar.js"></script>
+    <script src="Predator.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="options">
+        <h1>Now the weather is: <p id="weather"></p>
+        </h1>
+        <div class="info">
+            <button class="weatherBtt" onclick="winterFunc()">Winter</button>
+            <button class="weatherBtt" onclick="springFunc()">Spring</button>
+            <button class="weatherBtt" onclick="summerFunc()">Summer</button>
+            <button class="weatherBtt" onclick="autumnFunc()">Autumn</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
 </html>

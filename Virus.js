@@ -1,9 +1,24 @@
-class Virus extends GrassEater {
+class Virus {
     constructor(x, y) {
-        super(x,y);
-        this.energy = 40;
+        this.x = x;
+        this.y = y;
+        this.energy = 30;
         this.directions = [];
     }
+
+    getNewCoordinates() {
+        this.directions = [
+            [this.x - 1, this.y - 1],
+            [this.x, this.y - 1],
+            [this.x + 1, this.y - 1],
+            [this.x - 1, this.y],
+            [this.x + 1, this.y],
+            [this.x - 1, this.y + 1],
+            [this.x, this.y + 1],
+            [this.x + 1, this.y + 1]
+        ];
+    }
+
     chooseCell(character, food1, food2, food3, food4) {
         this.getNewCoordinates();
         var found = [];
@@ -19,9 +34,10 @@ class Virus extends GrassEater {
         return found;
     }
 
-    mul() {
+    mull() {
         var found = this.chooseCell(0);
         var newCell = random(found);
+
         if (newCell && this.energy >= 40) {
             var newX = newCell[0];
             var newY = newCell[1];
@@ -79,9 +95,9 @@ class Virus extends GrassEater {
                 break;
             }
         }
-        for (var i in angelArr) {
-         if (this.x == angelArr[i].x && this.y == angelArr[i].y) {
-             angelArr.splice(i, 1);
+        for (var i in helpArr) {
+         if (this.x == helpArr[i].x && this.y == helpArr[i].y) {
+             helpArr.splice(i, 1);
              break;
             }
         }
@@ -92,7 +108,7 @@ class Virus extends GrassEater {
             }
         }
             if (this.energy >= 20) {
-                this.mul();
+                this.mull();
             }
         }
 

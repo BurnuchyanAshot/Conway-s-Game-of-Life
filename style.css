@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+button{
+    margin: 10px;
+}
+.weatherBtt{
+    display:block;
+    margin-top: 5px;
+    margin-left: 77px;
+}
+.weatherBtt{
+    background-color: #28682b;
+    font-weight: bold;
+    color: white;
+    height: 50px;
+    width: 106px;
+    border-radius: 10%;
+    border : 1px solid #ffffff
+}

@@ -2,7 +2,7 @@ class GrassEater {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.energy = 30;
+        this.energy = 40;
         this.directions = [];
     }
 
@@ -34,7 +34,7 @@ class GrassEater {
         return found;
     }
     
-    mul() {
+    mull() {
         var found = this.chooseCell(0);
         var newCell = random(found);
 
@@ -87,11 +87,10 @@ class GrassEater {
                 if (newX == grassArr[i].x && newY == grassArr[i].y) {
                     grassArr.splice(i, 1);
                     break;
-                    
             }
         }
             if (this.energy >= 30) {
-                this.mul();
+                this.mull();
             }
         }
 
